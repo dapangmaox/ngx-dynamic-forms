@@ -4,17 +4,29 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "core": [
-        "dist/core"
+      "@ngx-dynamic-forms/core": [
+        "dist/ngx-dynamic-forms/core"
       ],
-      "ui-basic": [
-        "dist/ui-basic"
+      "@ngx-dynamic-forms/core/*": [
+        "dist/ngx-dynamic-forms/core/*"
       ],
-      "ui-kendo": [
-        "dist/ui-kendo"
+      "@ngx-dynamic-forms/ui-basic": [
+        "dist/ngx-dynamic-forms/ui-basic"
       ],
-      "ui-material": [
-        "dist/ui-material"
+      "@ngx-dynamic-forms/ui-basic/*": [
+        "dist/ngx-dynamic-forms/ui-basic"
+      ],
+      "@ngx-dynamic-forms/ui-kendo": [
+        "dist/ngx-dynamic-forms/ui-kendo"
+      ],
+      "@ngx-dynamic-forms/ui-kendo/*": [
+        "dist/ngx-dynamic-forms/ui-kendo"
+      ],
+      "@ngx-dynamic-forms/ui-material": [
+        "dist/ngx-dynamic-forms/ui-material"
+      ],
+      "@ngx-dynamic-forms/ui-material/*": [
+        "dist/ngx-dynamic-forms/ui-material"
       ]
     },
     "outDir": "./dist/out-tsc",

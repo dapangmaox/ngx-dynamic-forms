@@ -8,7 +8,12 @@
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
     "lint": "ng lint",
-    "lint:fix": "ng lint --fix"
+    "lint:fix": "ng lint --fix",
+    "build:lib": "npm run build:core && npm run build:ui-basic && npm run build:ui-kendo && npm run build:ui-material",
+    "build:core": "ng build @ngx-dynamic-forms/core",
+    "build:ui-basic": "ng build @ngx-dynamic-forms/ui-basic",
+    "build:ui-kendo": "ng build @ngx-dynamic-forms/ui-kendo",
+    "build:ui-material": "ng build @ngx-dynamic-forms/ui-material"
   },
   "private": true,
   "dependencies": {
