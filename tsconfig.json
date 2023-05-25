@@ -3,6 +3,20 @@
   "compileOnSave": false,
   "compilerOptions": {
     "baseUrl": "./",
+    "paths": {
+      "core": [
+        "dist/core"
+      ],
+      "ui-basic": [
+        "dist/ui-basic"
+      ],
+      "ui-kendo": [
+        "dist/ui-kendo"
+      ],
+      "ui-material": [
+        "dist/ui-material"
+      ]
+    },
     "outDir": "./dist/out-tsc",
     "forceConsistentCasingInFileNames": true,
     "strict": true,
