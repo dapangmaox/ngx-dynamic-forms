@@ -1,0 +1,9 @@
+<form [formGroup]="formName">
+  <label>
+    {{ field.label }}
+    <input
+      type="checkbox"
+      [name]="field.fieldName"
+      [formControlName]="field.fieldName" />
+  </label>
+</form>
