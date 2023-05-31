@@ -2,5 +2,9 @@
   <div *ngFor="let field of fields">
     <app-dynamic-field [field]="field" [formName]="dynamicFormGroup">
     </app-dynamic-field>
+    <app-dynamic-error
+      [formName]="dynamicFormGroup"
+      [fieldName]="field.fieldName">
+    </app-dynamic-error>
   </div>
 </form>

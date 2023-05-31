@@ -1,5 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-dynamic-form',
@@ -27,11 +27,29 @@ export class DynamicFormComponent implements OnInit {
     } = {};
     for (const field of Object.keys(this.model)) {
       const fieldProps = this.model[field];
-      formControlFields[field] = new FormControl(fieldProps.value);
+      const validators: any = this.addValidator(fieldProps.rules);
+      formControlFields[field] = new FormControl(fieldProps.value, validators);
       console.log({ ...fieldProps, fieldName: field });
       this.fields.push({ ...fieldProps, fieldName: field });
     }
 
     return formControlFields;
+  }
+
+  private addValidator(rules: object) {
+    if (!rules) {
+      return [];
+    }
+
+    const validators = Object.keys(rules).map(rule => {
+      switch (rule) {
+        case 'required':
+          return Validators.required;
+        default:
+          return null;
+      }
+    });
+
+    return validators;
   }
 }
