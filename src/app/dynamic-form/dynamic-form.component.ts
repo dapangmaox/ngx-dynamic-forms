@@ -29,7 +29,6 @@ export class DynamicFormComponent implements OnInit {
       const fieldProps = this.model[field];
       const validators: any = this.addValidator(fieldProps.rules);
       formControlFields[field] = new FormControl(fieldProps.value, validators);
-      console.log({ ...fieldProps, fieldName: field });
       this.fields.push({ ...fieldProps, fieldName: field });
     }
 
